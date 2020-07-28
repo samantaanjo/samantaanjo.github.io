@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Assignment one </title>
+  <!-- ITEM 1 A1-->
+  <link href="main.css" rel="stylesheet">
+  <link href="bootstrap.css" rel="stylesheet">
+  <link href="bootstrap.min.css" rel="stylesheet">
+  <script src="main.js" defer></script>
+
+  <!-- ITEM 2  Facebook API-->
+  <script src="facebookAPI.js" type="text/javascript"></script>
+  
+</head>
+<body>
+  <main>
+    <header>
+      <!-- ITEM 2 A1-->
+      <h1 class="text-primary"> Sam's to do List</h1>
+    </header>
+    <section>
+      <!-- ITEM 3 A1 -->
+      <h2> Add your item: </h2>
+      <input type="text" id="item" autocomplete="off">
+      <button>Add</button>
+    </section>
+    <section class="jumbotron">
+      <!-- ITEM 4 A1-->
+      <ol>
+
+
+      </ol>
+    </section>
+    <!-- ITEM 2 A2 
+       Adding  browser APIs:
+      Using the Web Audio API-->
+    <section>
+      <audio id="audio" src="http://static1.grsites.com/archive/sounds/scifi/scifi032.mp3">
+      </audio>
+    </section>
+    <!-- ITEM 2 A2 
+       Adding  third party APIs:
+      Youtube API-->
+    <section>
+      <h2> Now that you finish your one more item, organize your files </h2>
+      <p id="p1" draggable="true">This element is draggable.</p>
+
+     <!-- Facebook API -->
+
+	   <p> Log in for more info </p>
+	
+      <div id="status"></div>
+      <div
+      class="fb-login-button" data-size="large" data-button-type="continue_with" 
+      data-layout="default" data-auto-logout-link="false" 
+      data-use-continue-as="false" data-width=""
+      onlogin="Login();">
+      </div>
+      
+      <div  id="picture">
+      
+    
+     </section>
+  </main>
+</body>
+</html>
