@@ -17,87 +17,72 @@ function addItem() {
     checkbox.type = "checkbox";
     checkbox.value = "value";
     checkbox.id = "ck";
-  
+
     let Delete = document.createElement('button');
     Delete.type = "button";
     Delete.textContent = "Delete";
     Delete.id = "del";
-    
-  
+
+
     li.appendChild(checkbox);
     li.appendChild(document.createTextNode(text.value));
     li.appendChild(Delete);
     ol.appendChild(li);
 
-   
+
     // ITEM 5 A1
-    
-        // on change event =  changes the color of the li element and move the item 
-        checkbox.onchange = ChangeColor_MoveItem;
 
-        // on double click event = changes the color back to what it was and uncheked the li element
-        checkbox.ondblclick = rollBackColor;
+    // on change event =  changes the color of the li element and move the item 
+    checkbox.onchange = ChangeColor_MoveItem;
 
-        //change the color of the selected li element according to the checkbox selection
-        //and move the the last item
-         function ChangeColor_MoveItem() {
- 
-          
-          if(checkbox.checked = true){
+    // on double click event = changes the color back to what it was and uncheked the li element
+    checkbox.ondblclick = rollBackColor;
+
+    //change the color of the selected li element according to the checkbox selection
+    //and move the the last item
+    function ChangeColor_MoveItem() {
+
+
+        if (checkbox.checked = true) {
             li.style.color = '#DF691A';
             li.style.textDecoration = 'line-through';
-          }
-          else {
-                li.style.color = 'black';
-          }
-           
-           //Add li element to the list
-           ol.appendChild(li);
-
-        }
-
-        //get the color back if unchecked
-        function rollBackColor() {
-
-            checkbox.checked = false;
+        } else {
             li.style.color = 'black';
-            li.style.textDecoration = 'none';
         }
-  
-      Delete.onclick = deleteLine;
-   
-}
 
- // -------------- Assignment 02 ---------------- //
+        //Add li element to the list
+        ol.appendChild(li);
 
- // ITEM 1B 
- //Delete funtion created individually, not inside my Additem function as I have done for the A1.
-    function deleteLine(e) {
-        
-            console.log('this step is being executed');
-            let delItem = e.target.closest("li");
-        
-        
-            delItem.remove();
-          
-
-          
-          
     }
 
+    //get the color back if unchecked
+    function rollBackColor() {
+
+        checkbox.checked = false;
+        li.style.color = 'black';
+        li.style.textDecoration = 'none';
+    }
+
+    Delete.onclick = deleteLine;
+
+}
+
+// -------------- Assignment 02 ---------------- //
+
+// ITEM 1B 
+//Delete funtion created individually, not inside my Additem function as I have done for the A1.
+function deleteLine(e) {
+
+
+
+    // ITEM 2 -  Web APIs - Console API
+    //Helps the develepor to keep track of the steps being executed, 
+    //works as a debuging tool.
+    console.log('this step is being executed');
     
-         // ITEM 2 -  Web APIs - Console API
-          //Check on log what time and which item was deleted
-       
-          let myString = 'Hello world';
-
-          // Output "Hello world" to the console
-          console.log(myString)
-
-
- 
+    let delItem = e.target.closest("li");
+    delItem.remove();
 
 
 
-
-
+}
