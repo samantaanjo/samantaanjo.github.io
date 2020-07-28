@@ -74,25 +74,26 @@ function addItem() {
  //Delete funtion created individually, not inside my Additem function as I have done for the A1.
     function deleteLine(e) {
         
+            console.log('this step is being executed');
             let delItem = e.target.closest("li");
+        
+        
             delItem.remove();
+          
 
+          
           
     }
 
-    // ITEM 2 - WebBrowser API 
+    
+         // ITEM 2 -  Web APIs - Console API
+          //Check on log what time and which item was deleted
+       
+          let myString = 'Hello world';
 
-          function dragstart_handler(ev) {
-            // Add the target element's id to the data transfer object
-            ev.dataTransfer.setData("text/plain", ev.target.id);
-          }
-        
-          window.addEventListener('DOMContentLoaded', () => {
-            // Get the element by id
-            const element = document.getElementById("p1");
-            // Add the ondragstart event listener
-            element.addEventListener("dragstart", dragstart_handler);
-          });
+          // Output "Hello world" to the console
+          console.log(myString)
+
 
  
 
